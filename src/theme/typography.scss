@@ -63,3 +63,10 @@ h3 {
     background-color: $white;
   }
 }
+
+.container {
+  width: 100%;
+  max-width: calc(1110px + 2 * 40px);
+  padding: 0 40px;
+  display: flex;
+}

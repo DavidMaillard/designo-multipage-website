@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Header />
-    <router-view />
+    <main>
+      <router-view />
+    </main>
     <Footer />
 
     <new-content-available-toastr
@@ -56,6 +58,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @extend .regularText;
+
+    main {
+      flex: 1;
+    }
   }
 }
 </style>

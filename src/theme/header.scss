@@ -1,0 +1,41 @@
+.header {
+  @extend .container;
+  margin: 65px 0;
+
+  .header-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header-logo {
+      display: flex;
+
+      img {
+        height: 24px;
+      }
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+
+      .nav-link {
+        font-family: Jost;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 2px;
+        color: #333136;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-right: 40px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
