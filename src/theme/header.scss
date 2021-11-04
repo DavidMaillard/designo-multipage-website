@@ -2,23 +2,47 @@
   @extend .container;
   margin: 65px 0;
 
+  @media (max-width: 767px) {
+    margin: 0;
+    position: sticky;
+    top: 0;
+    padding: 0;
+  }
+
   .header-container {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
+    @media (max-width: 767px) {
+      padding: 35px 24px;
+    }
+
     .header-logo {
       display: flex;
 
       img {
-        height: 24px;
+        height: 27px;
       }
     }
 
     .header-nav {
       display: flex;
       align-items: center;
+
+      @media (max-width: 767px) {
+        position: fixed;
+        inset: 0;
+        top: 96px;
+        background-color: rgba(#000, .5);
+        flex-direction: column;
+        display: none;
+
+        &.is-active {
+          display: flex;
+        }
+      }
 
       .nav-link {
         font-family: Jost;
@@ -32,8 +56,43 @@
         text-decoration: none;
         margin-right: 40px;
 
+        @media (max-width: 767px) {
+          width: 100%;
+          font-size: 24px;
+          line-height: 25px;
+          color: $white;
+          padding: 16px 24px;
+          background-color: $black;
+          margin: 0;
+
+          &:first-child {
+            padding-top: 48px;
+          }
+
+          &:last-child {
+            padding-bottom: 48px;
+          }
+        }
+
         &:last-child {
           margin-right: 0;
+        }
+      }
+    }
+
+    .header-menu-trigger {
+      display: none;
+
+      @media (max-width: 767px) {
+        width: 24px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        svg {
+          height: 20px;
         }
       }
     }
