@@ -1,17 +1,12 @@
 <template>
-  <section class="home-page">
-    Home
-  </section>
+  <footer class="footer">Footer</footer>
 </template>
 
 <script>
 export default {
-
 }
 </script>
 
 <style lang="scss" scoped>
-.home-page {
 
-}
 </style>

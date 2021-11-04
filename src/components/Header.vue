@@ -1,17 +1,12 @@
 <template>
-  <section class="home-page">
-    Home
-  </section>
+  <header class="header">Header</header>
 </template>
 
 <script>
 export default {
-
 }
 </script>
 
 <style lang="scss" scoped>
-.home-page {
 
-}
 </style>

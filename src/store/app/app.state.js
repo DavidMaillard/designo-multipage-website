@@ -4,6 +4,5 @@ export default {
   networkOnLine: true,
   SWRegistrationForNewContent: null,
   showAddToHomeScreenModalForApple: false,
-  refreshingApp: false,
-  score: localStorage.getItem('rock-paper-scissor-score') ?? 0
+  refreshingApp: false
 }
