@@ -1,1 +1,395 @@
-.about-page {}
+.about-page {
+  @extend .page;
+
+  .about-us {
+    @extend .container;
+    margin-bottom: 160px;
+
+    @media (max-width: 1023px) {
+      margin-bottom: 120px;
+    }
+
+    @media (max-width: 767px) {
+      margin-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .about-us-container {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 1006px;
+        height: 594px;
+        left: -165px;
+        top: 320px;
+        background: url('/assets/shared/desktop/bg-pattern-leaf.svg');
+
+        @media (max-width: 1023px) {
+          display: none;
+        }
+      }
+
+      .about-us-wrapper {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        min-height: 480px;
+        background: $peach;
+        border-radius: 15px;
+        overflow: hidden;
+
+        @media (max-width: 1023px) {
+          flex-direction: column-reverse;
+          min-height: auto;
+        }
+
+        @media (max-width: 767px) {
+          border-radius: 0;
+        }
+
+        .about-us-content {
+          flex: 1;
+          padding: 40px 80px 40px 95px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background: url('/assets/about/desktop/bg-pattern-hero-about-desktop.svg') no-repeat left bottom / 640px;
+
+          @media (max-width: 1023px) {
+            align-items: center;
+            padding: 64px 58px;
+            background-position: left -120px bottom 100px;
+          }
+
+          @media (max-width: 767px) {
+            padding: 80px 24px;
+            background-position: right top -120px;
+            background-size: 292px;
+          }
+
+          .content-title {
+            color: $white;
+            margin: 0 0 32px;
+
+            @media (max-width: 1023px) {
+              text-align: center;
+            }
+          }
+
+          .content-text {
+            color: $white;
+            margin: 0;
+
+            @media (max-width: 1023px) {
+              text-align: center;
+            }
+          }
+        }
+
+        .about-us-image {
+          width: 476px;
+          flex-shrink: 0;
+          background: url('/assets/about/desktop/image-about-hero.jpg') no-repeat center center / cover;
+
+          @media (max-width: 1023px) {
+            width: 100%;
+            height: 320px;
+            background-image: url('/assets/about/tablet/image-about-hero.jpg');
+          }
+
+          @media (max-width: 767px) {
+            background-image: url('/assets/about/mobile/image-about-hero.jpg');
+          }
+        }
+      }
+    }
+  }
+
+  .talent {
+    @extend .container;
+    margin-bottom: 160px;
+
+    @media (max-width: 1023px) {
+      margin-bottom: 120px;
+    }
+
+    @media (max-width: 767px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .talent-container {
+      .talent-wrapper {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        min-height: 640px;
+        background: #FDF3F0;
+        border-radius: 15px;
+        overflow: hidden;
+
+        @media (max-width: 1023px) {
+          flex-direction: column;
+          min-height: auto;
+        }
+
+        @media (max-width: 767px) {
+          border-radius: 0;
+        }
+
+        .talent-content {
+          flex: 1;
+          padding: 40px 95px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background: url('/assets/shared/desktop/bg-pattern-three-circles.svg') no-repeat left -146px bottom / 584px;
+
+          @media (max-width: 1023px) {
+            align-items: center;
+            padding: 64px 58px;
+            background-position: right 11px bottom 44px;
+          }
+
+          @media (max-width: 767px) {
+            padding: 80px 24px;
+            background-position: top left;
+          }
+
+          .content-title {
+            color: $peach;
+            margin: 0 0 32px;
+
+            @media (max-width: 1023px) {
+              text-align: center;
+            }
+          }
+
+          .content-text {
+            margin: 0;
+
+            @media (max-width: 1023px) {
+              text-align: center;
+            }
+          }
+        }
+
+        .talent-image {
+          width: 476px;
+          flex-shrink: 0;
+          background: url('/assets/about/desktop/image-world-class-talent.jpg') no-repeat center center / cover;
+
+          @media (max-width: 1023px) {
+            width: 100%;
+            height: 320px;
+            background-image: url('/assets/about/tablet/image-world-class-talent.jpg');
+          }
+
+          @media (max-width: 767px) {
+            background-image: url('/assets/about/mobile/image-world-class-talent.jpg');
+          }
+        }
+      }
+    }
+  }
+
+  .deal {
+    @extend .container;
+    margin-bottom: 160px;
+
+    @media (max-width: 1023px) {
+      margin-bottom: 120px;
+    }
+
+    @media (max-width: 767px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .deal-container {
+      .deal-wrapper {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        min-height: 640px;
+        background: #FDF3F0;
+        border-radius: 15px;
+        overflow: hidden;
+
+        @media (max-width: 1023px) {
+          flex-direction: column-reverse;
+          min-height: auto;
+        }
+
+        @media (max-width: 767px) {
+          border-radius: 0;
+        }
+
+        .deal-content {
+          flex: 1;
+          padding: 40px 95px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background: url('/assets/shared/desktop/bg-pattern-two-circles.svg') no-repeat left bottom / 584px;
+
+          @media (max-width: 1023px) {
+            align-items: center;
+            padding: 64px 58px;
+            background-image: url('/assets/shared/desktop/bg-pattern-three-circles.svg');
+            background-position: right 11px bottom 44px;
+          }
+
+          @media (max-width: 767px) {
+            padding: 80px 24px;
+            background-position: top left;
+          }
+
+          .content-title {
+            color: $peach;
+            margin: 0 0 32px;
+
+            @media (max-width: 1023px) {
+              text-align: center;
+            }
+          }
+
+          .content-text {
+            margin: 0;
+
+            @media (max-width: 1023px) {
+              text-align: center;
+            }
+          }
+        }
+
+        .deal-image {
+          width: 476px;
+          flex-shrink: 0;
+          background: url('/assets/about/desktop/image-real-deal.jpg') no-repeat center center / cover;
+
+          @media (max-width: 1023px) {
+            width: 100%;
+            height: 320px;
+            background-image: url('/assets/about/tablet/image-real-deal.jpg');
+          }
+
+          @media (max-width: 767px) {
+            background-image: url('/assets/about/mobile/image-real-deal.jpg');
+          }
+        }
+      }
+    }
+  }
+
+  .locations {
+    @extend .container;
+    margin-bottom: 160px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 1006px;
+      height: 594px;
+      right: -445px;
+      top: 182px;
+      background: url('/assets/shared/desktop/bg-pattern-leaf.svg');
+
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      margin-bottom: 120px;
+    }
+
+    .locations-container {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 1023px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .location-item {
+        width: calc((100% - 60px) / 3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: 1023px) {
+          width: 100%;
+          margin-bottom: 80px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        @media (max-width: 767px) {
+          margin-bottom: 48px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        &:nth-child(1) .location-illustration-container:before {
+          transform: rotate(90deg);
+        }
+
+        &:nth-child(3) .location-illustration-container:before {
+          transform: rotate(-90deg);
+        }
+
+        .location-illustration-container {
+          position: relative;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 202px;
+          margin-bottom: 48px;
+
+          &:before {
+            content: '';
+            position: absolute;
+            width: 202px;
+            height: 202px;
+            top: 0;
+            left: calc(50% - 101px);
+            background: url('/assets/shared/desktop/bg-pattern-small-circle.svg') no-repeat center center / contain;
+          }
+
+          .location-illustration {
+            position: relative;
+            width: 182px;
+          }
+        }
+
+        .location-title {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 130%;
+          text-transform: uppercase;
+          margin: 0 0 32px;
+        }
+
+        .location-link {
+          @extend .button;
+        }
+      }
+    }
+  }
+}
