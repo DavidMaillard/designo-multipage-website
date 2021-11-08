@@ -1,1 +1,154 @@
-.locations-page {}
+.locations-page {
+  @extend .page;
+
+  .locations {
+    @extend .container;
+    flex-direction: column;
+    margin-bottom: 160px;
+
+    @media (max-width: 1023px) {
+      margin-bottom: 120px;
+    }
+
+    @media (max-width: 767px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .location-item {
+      width: 100%;
+      display: flex;
+      align-items: stretch;
+      margin-bottom: 32px;
+
+      @media (max-width: 1023px) {
+        flex-direction: column-reverse;
+        margin-bottom: 120px;
+      }
+
+      @media (max-width: 767px) {
+        margin-bottom: 40px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+
+        @media (max-width: 1023px) {
+          flex-direction: column-reverse;
+        }
+
+        .location-map {
+          margin: 0 30px 0 0;
+
+          @media (max-width: 1023px) {
+            margin: 0 0 24px 0;
+          }
+
+          @media (max-width: 767px) {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .location-map {
+        width: 350px;
+        height: 326px;
+        flex-shrink: 0;
+        margin-left: 30px;
+        border-radius: 15px;
+        background-position: center center;
+        background-size: cover;
+
+        @media (max-width: 1023px) {
+          width: 100%;
+          margin: 0 0 24px;
+        }
+
+        @media (max-width: 767px) {
+          margin: 0;
+        }
+
+        &.canada {
+          background-image: url('/assets/locations/desktop/image-map-canada.png');
+
+          @media (max-width: 1023px) {
+            background-image: url('/assets/locations/tablet/image-map-canada.png');
+          }
+        }
+
+        &.australia {
+          background-image: url('/assets/locations/desktop/image-map-australia.png');
+
+          @media (max-width: 1023px) {
+            background-image: url('/assets/locations/tablet/image-map-australia.png');
+          }
+        }
+
+        &.united-kingdom {
+          background-image: url('/assets/locations/desktop/image-map-united-kingdom.png');
+
+          @media (max-width: 1023px) {
+            background-image: url('/assets/locations/tablet/image-map-uk.png');
+          }
+        }
+      }
+
+      .location-content {
+        flex: 1;
+        border-radius: 15px;
+        padding: 40px 95px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #FDF3F0 url('/assets/shared/desktop/bg-pattern-three-circles.svg') no-repeat left bottom / 584px;
+
+        @media (max-width: 1023px) {
+          padding: 88px 75px;
+        }
+
+        @media (max-width: 767px) {
+          padding: 80px 24px;
+          background-position: top left;
+        }
+
+        .location-title {
+          color: $peach;
+          margin: 0 0 24px;
+
+          @media (max-width: 767px) {
+            text-align: center;
+          }
+        }
+
+        .location-columns {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+
+          @media (max-width: 767px) {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .location-column {
+            width: calc(50% - 15px);
+
+            @media (max-width: 767px) {
+              width: 100%;
+              margin-bottom: 24px;
+              text-align: center;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
