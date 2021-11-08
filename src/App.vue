@@ -33,6 +33,13 @@ export default {
     ...mapGetters('app', ['newContentAvailable']),
     ...mapState('app', ['showAddToHomeScreenModalForApple', 'refreshingApp'])
   },
+  watch: {
+    $route(to, from) {
+      if (to !== from) {
+        window.scrollTo(0, 0)
+      }
+    }
+  },
   methods: {
     ...mapActions('app', [
       'closeAddToHomeScreenModalForApple',
@@ -61,6 +68,7 @@ body {
     @extend .regularText;
 
     main {
+      width: 100%;
       flex: 1;
     }
   }
