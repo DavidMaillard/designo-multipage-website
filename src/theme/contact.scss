@@ -1,1 +1,108 @@
-.contact-page {}
+.contact-page {
+  @extend .page;
+
+  .locations {
+    @extend .container;
+    margin-bottom: 160px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 1006px;
+      height: 594px;
+      right: -165px;
+      top: 90px;
+      background: url('/assets/shared/desktop/bg-pattern-leaf.svg');
+
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      margin-bottom: 120px;
+    }
+
+    .locations-container {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 1023px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .location-item {
+        width: calc((100% - 60px) / 3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: 1023px) {
+          width: 100%;
+          margin-bottom: 80px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        @media (max-width: 767px) {
+          margin-bottom: 48px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        &:nth-child(1) .location-illustration-container:before {
+          transform: rotate(90deg);
+        }
+
+        &:nth-child(3) .location-illustration-container:before {
+          transform: rotate(-90deg);
+        }
+
+        .location-illustration-container {
+          position: relative;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 202px;
+          margin-bottom: 48px;
+
+          &:before {
+            content: '';
+            position: absolute;
+            width: 202px;
+            height: 202px;
+            top: 0;
+            left: calc(50% - 101px);
+            background: url('/assets/shared/desktop/bg-pattern-small-circle.svg') no-repeat center center / contain;
+          }
+
+          .location-illustration {
+            position: relative;
+            width: 182px;
+          }
+        }
+
+        .location-title {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 130%;
+          text-transform: uppercase;
+          margin: 0 0 32px;
+        }
+
+        .location-link {
+          @extend .button;
+        }
+      }
+    }
+  }
+}
