@@ -1,6 +1,162 @@
 .contact-page {
   @extend .page;
 
+  .contact-form-wrapper {
+    @extend .container;
+    margin-bottom: 160px;
+
+    @media(max-width: 1023px) {
+      margin-bottom: 120px;
+    }
+
+    @media(max-width: 767px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .contact-form-container {
+      width: 100%;
+      display: flex;
+      border-radius: 15px;
+      align-items: stretch;
+      padding: 55px 95px;
+      background: $peach url('/assets/contact/desktop/bg-pattern-hero-desktop.svg') no-repeat left bottom / 640px;
+
+      @media(max-width: 1023px) {
+        flex-direction: column;
+        padding: 71px 58px;
+        background-position: top -83px left -121px;
+      }
+
+      @media(max-width: 767px) {
+        padding: 71px 24px;
+        border-radius: 0;
+
+        background-image: url('/assets/contact/mobile/bg-pattern-hero-contact-mobile.svg');
+        background-size: 876px;
+        background-position: top left -116px;
+      }
+
+      .contact-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media(max-width: 1023px) {
+          margin-bottom: 40px;
+        }
+
+        @media(max-width: 767px) {
+          align-items: center;
+        }
+
+        .contact-title {
+          color: $white;
+          margin: 0 0 32px;
+
+          @media(max-width: 767px) {
+            text-align: center;
+          }
+        }
+
+        .contact-text {
+          color: $white;
+          margin: 0;
+
+          @media(max-width: 767px) {
+            text-align: center;
+          }
+        }
+      }
+
+      .contact-form {
+        width: 380px;
+        flex-shrink: 0;
+        margin-left: 95px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        @media(max-width: 1023px) {
+          width: 100%;
+          margin-left: 0;
+        }
+
+        @media(max-width: 767px) {
+          align-items: center;
+        }
+
+        .input-group {
+          position: relative;
+          width: 100%;
+          display: flex;
+          margin-bottom: 24px;
+
+          &.has-error {
+            .form-error {
+              display: block;
+            }
+          }
+
+          .form-input, .form-textarea {
+            font-family: Jost;
+            width: 100%;
+            border: none;
+            appearance: none;
+            outline: none;
+            background-color: transparent;
+            padding: 10px 16px;
+            border-bottom: 1px solid $white;
+            color: $white;
+
+            &::placeholder {
+              color: $white;
+              mix-blend-mode: normal;
+              opacity: 0.5;
+            }
+
+            &:active, &:focus {
+              border-width: 2px;
+            }
+          }
+
+          .form-textarea {
+            min-height: 100px;
+          }
+
+          .form-error {
+            display: none;
+            position: absolute;
+            padding: 5px 30px 5px 10px;
+            background-color: $peach;
+            right: 8px;
+            font-family: Jost;
+            font-style: italic;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 217%;
+            color: $white;
+            margin: 0;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMCAyMGM1LjUyMyAwIDEwLTQuNDc3IDEwLTEwUzE1LjUyMyAwIDEwIDAgMCA0LjQ3NyAwIDEwczQuNDc3IDEwIDEwIDEwWm0tMS04VjVoMnY3SDlabTAgNHYtMmgydjJIOVoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=");
+            background-position: right center;
+            background-repeat: no-repeat;
+            background-size: 20px;
+          }
+        }
+
+        .form-submit {
+          @extend .button;
+          @extend .light;
+
+          @media(max-width: 767px) {
+            min-width: 152px;
+          }
+        }
+      }
+    }
+  }
+
   .locations {
     @extend .container;
     margin-bottom: 160px;
